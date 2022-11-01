@@ -1,3 +1,5 @@
+import { Container, card } from "@mui/system";
+
 import { useEffect, useState } from "react";
 
 const App = () => {
@@ -17,7 +19,7 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <Container maxWidth="sm">
       {/* Função utilizando map */}
       {produtos.map(({ id, title, price, image }) => {
         return (
@@ -28,7 +30,7 @@ const App = () => {
           </article>
         );
       })}
-    </div>
+    </Container>
   );
 };
 
