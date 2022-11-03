@@ -43,3 +43,8 @@ code {
 .boxConteudo img {
   width: 50%;
 }
+
+h1 {
+  text-align: center;
+  margin: 50px 0;
+}

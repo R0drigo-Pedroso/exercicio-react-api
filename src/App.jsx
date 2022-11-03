@@ -17,19 +17,27 @@ const App = () => {
   }, []);
 
   return (
-    <section className="container">
-      {produtos.map(({ id, title, price, image }) => {
-        return (
-          <section className="alinhamento">
-            <article className="boxConteudo" key={id}>
-              <img src={image} alt="" />
-              <h3>{title}</h3>
-              <p>{price}</p>
-            </article>
-          </section>
-        );
-      })}
-    </section>
+    <>
+      <h1>Exercicio consumindo API</h1>
+      <section className="container">
+        {produtos.map(({ id, title, price, image }) => {
+          return (
+            <section className="alinhamento">
+              <article className="boxConteudo" key={id}>
+                <img src={image} alt="" />
+                <h3>{title}</h3>
+                <p>
+                  {price.toLocaleString("pt-br", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </p>
+              </article>
+            </section>
+          );
+        })}
+      </section>
+    </>
   );
 };
 
